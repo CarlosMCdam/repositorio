@@ -1,0 +1,17 @@
+package prueba;
+
+import java.security.DrbgParameters.NextBytes;
+import java.util.Scanner;
+
+public class ej9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c;
+		System.out.println("Introduzca un caracter");
+		Scanner ll = new Scanner(System.in);
+		c = Next.int()
+		System.out.println();
+	}
+
+}

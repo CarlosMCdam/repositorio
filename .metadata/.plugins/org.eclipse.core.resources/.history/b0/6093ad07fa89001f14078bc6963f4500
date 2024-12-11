@@ -1,0 +1,15 @@
+package prueba;
+
+import java.util.Scanner;
+
+public class ej9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char c;
+		System.out.println("Introduzca un caracter");
+		Scanner ll = new Scanner(System.in);
+		System.out.println(c = 6f);
+	}
+
+}

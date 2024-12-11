@@ -1,0 +1,19 @@
+package prueba;
+
+import java.util.Scanner;
+
+public class ej10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float c;
+		System.out.println("sdfsdf");
+		for (c = 0;c<32 && c>255;System.out.println("asd")) {
+		System.out.println("Introduzca un número entre 32 y 255");
+		Scanner l = new Scanner(System.in);
+		c = l.nextFloat();
+		}
+		System.out.println((char)c);
+	}
+
+}

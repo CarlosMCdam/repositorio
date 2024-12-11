@@ -1,0 +1,18 @@
+package ejercicios;
+
+public class Ej12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j,marco[][] = new int[5][15];
+		for ( i = 0, j = 0; i < marco.length; i++) {
+			if ( i==0 || i==marco.length || j==0 || j==marco.length) {
+				System.out.print("1 ");
+			}
+			else {
+				System.out.println("  ");
+			}
+		}
+	}
+
+}

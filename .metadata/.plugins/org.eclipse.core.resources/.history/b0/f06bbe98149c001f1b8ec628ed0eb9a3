@@ -1,0 +1,20 @@
+package ejercicios;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float c[][][] = new float[4][4][4];
+		int i,j,k,q;
+		for ( i = 0; i < c.length; i++ ) {
+			for ( j = 0; j < c[i].length; j++ ) {
+				for ( q = 0, k = 0; k < c[i][k].length-1; k++, q++ ) {
+					c[i][j][k] = (float)Math.random()*10;
+					System.out.printf(c[i][j][k]+" ");
+				}
+			}
+		}
+		System.out.println(q);
+	}
+ 
+}

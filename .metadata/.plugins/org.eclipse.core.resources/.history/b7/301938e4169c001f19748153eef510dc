@@ -1,0 +1,18 @@
+package ejercicios;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j,k,c[][][] = new int[4][4][4];
+		for ( i = 0; i < c.length; i++ ) {
+			for ( j = 0; j < c[i].length; j++ ) {
+				for ( k = 0; k < c[i][k].length-1; k++ ) {
+					c[i][j][k] = k;
+					System.out.print(c[i][j][k]+" ");
+				}
+			}
+		}
+	}
+
+}

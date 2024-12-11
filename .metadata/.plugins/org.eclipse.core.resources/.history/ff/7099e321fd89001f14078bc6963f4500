@@ -1,0 +1,17 @@
+package prueba;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ej10 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		int c;
+		System.out.println("Introduzca un caracter");
+		Scanner l = new Scanner(System.in);
+		c = l.nextInt();
+		System.out.println((char)c);
+	}
+
+}

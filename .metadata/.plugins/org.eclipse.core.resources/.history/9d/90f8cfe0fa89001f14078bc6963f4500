@@ -1,0 +1,17 @@
+package prueba;
+
+import java.io.IOException;
+import java.security.DrbgParameters.NextBytes;
+import java.util.Scanner;
+
+public class ej9 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		char c;
+		System.out.println("Introduzca un caracter");
+		c= (char) System.in.read();
+		System.out.println(c);
+	}
+
+}

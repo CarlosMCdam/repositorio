@@ -1,0 +1,22 @@
+package ejercicios;
+
+public class Ej2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,i2,origen[] = new int[11],destino[] = new int[11];
+		for ( i = 0, i2=0; i < origen.length; i++ ) {
+			if( origen[i]%2==0 && origen[i]>25 ) {
+				destino[i2] = origen[i];
+				i2++;
+			} 
+		}
+		for ( i = 0; i < origen.length; i++ ) {
+			System.out.print(destino[i]+" ");
+		}
+		for ( i = 0; i<i2; i++ ) {
+			System.out.print(destino[i]+" ");
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package bucles;
+
+import java.util.Scanner;
+
+public class Ej30 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int c,ct;
+		System.out.println("Inntroduce números. El programa leerá hasta que la suma de estos supere 50");
+		Scanner l = new Scanner(System.in);
+		for ( c=0, ct=0; ct>50 ;) {
+			
+		}
+	}
+
+}
