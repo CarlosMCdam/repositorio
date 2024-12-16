@@ -86,20 +86,107 @@ public class BuscaminasMétodos {
             }
         }
     }
-    public static void Juego(int[][][] c, int cf, int cc, int nfc, int cm, int ccs, int cb, int cmv) {
+    public static void Juego(int[][][] c, int cf, int cc, int nfc, int cm, int ccs, int cb, int cmv, int cfaux) {
         Scanner sc = new Scanner(System.in);
         for (boolean activarfin = false, fin = false; !fin;) {
-            for (cf = 0; cf < nfc; cf++) {
-                for (cc = 0; cc < nfc; cc++) {
-                    if (c[1][cf][cc] == 12) {
-                        System.out.print("  P  ");
+            for (cf = -1, cfaux = 0; cfaux < nfc+2; cf++, cfaux++) {
+                if (cf == -1 && cfaux==0 || cfaux == c[0].length+1) {
+                    for (cc = 0; cc < nfc+2; cc++) {
+                        if (cc == 0) {
+                            if (nfc < 10) {
+                                System.out.print("*----");
+                            } else if (nfc < 100) {
+                                System.out.print("*-----");
+                            } else if (nfc < 1000) {
+                                System.out.print("*------");
+                            }
+                        } else if (cc == c[0].length+1) {
+                            if (nfc < 10) {
+                                System.out.print("----*");
+                            } else if (nfc < 100) {
+                                System.out.print("-----*");
+                            } else if (nfc < 1000) {
+                                System.out.print("------*");
+                            }
+                        } else {
+                            if (nfc < 10) {
+                                if (cf == -1) {
+                                    System.out.printf("%1s","* "+cc+" *");
+                                }
+                                else {
+                                    System.out.print("*---*");
+                                }
+                            } else if (nfc < 100) {
+                                if (cf == -1) {
+                                    System.out.print("* ");
+                                    System.out.printf("%2s",cc);
+                                    System.out.print(" *");
+                                }
+                                else {
+                                    System.out.print("*----*");
+                                }
+                            } else if (nfc < 1000) {
+                                if (cf == -1) {
+                                    System.out.printf("%3s","* "+cc+" *");
+                                }
+                                else {
+                                    System.out.print("*-----*");
+                                }
+                            }
+                        }
                     }
-                    else {
-                        if (c[1][cf][cc] == 11) {
-                            System.out.print("  " + c[0][cf][cc] + "  ");
+                }
+                else {
+                    for (cc = 0; cc < nfc; cc++) {
+                        if (cc == 0) {
+                            if (nfc < 10) {
+                                System.out.printf("%1s",cf+1);
+                                System.out.print("    ");
+                            } else if (cf < 100) {
+                                System.out.printf("%2s",cf+1);
+                                System.out.print("    ");
+                            } else if (cf < 1000) {
+                                System.out.printf("%3s",cf+1);
+                                System.out.print("    ");
+                            }
+                        }
+                        if (c[1][cf][cc] == 12) {
+                            if (nfc < 10) {
+                                System.out.print("  P  ");
+                            } else if (cf < 100) {
+                                System.out.print("   P  ");
+                            } else if (cf < 1000) {
+                                System.out.print("   P   ");
+                            }
                         }
                         else {
-                            System.out.print("     ");
+                            if (c[1][cf][cc] == 11) {
+                                if (nfc < 10) {
+                                    System.out.print("  "+c[0][cf][cc]+"  ");
+                                } else if (cf < 100) {
+                                    System.out.print("   "+c[0][cf][cc]+"  ");
+                                } else if (cf < 1000) {
+                                    System.out.print("   "+c[0][cf][cc]+"   ");
+                                }
+                            }
+                            else {
+                                if (nfc < 10) {
+                                    System.out.print("     ");
+                                } else if (cf < 100) {
+                                    System.out.print("      ");
+                                } else if (cf < 1000) {
+                                    System.out.print("       ");
+                                }
+                            }
+                        }
+                        if (cc == c[0].length-1) {
+                            if (nfc < 10) {
+                                System.out.print("    *");
+                            } else if (nfc < 100) {
+                                System.out.print("     *");
+                            } else if (nfc < 1000) {
+                                System.out.print("      *");
+                            }
                         }
                     }
                 }
@@ -127,7 +214,7 @@ public class BuscaminasMétodos {
                 for (int scfc, sccc, scfb, sccb, acc = 3; acc > 2; ) {
                     acc = sc.nextInt();
                     if (acc == 1) {
-                        for (scfc = 99999, sccc = 99999; scfc > nfc || sccc > nfc;) {
+                        for (scfc = 1000, sccc = 1000; scfc > nfc || sccc > nfc;) {
                             System.out.println("Selecciona una casilla.\nColumna y fila...");
                             sccc = sc.nextInt() - 1;
                             scfc = sc.nextInt() - 1;

@@ -8,7 +8,7 @@ public class Buscaminas {
         System.out.println("Para seleccionar casillas, utiliza 1, y para ponder banderas, utiliza 2.\n");
         System.out.println("Dimensión del tablero:");
 
-        int cf = 0, cc = 0, ccs = 0, cm = 0, cb = 0, cmv = 0, nfc = sc.nextInt();
+        int cf = 0, cc = 0, ccs = 0, cm = 0, cb = 0, cmv = 0, cfaux = 0, nfc = sc.nextInt();
         //cf es la cuenta de las filas
         //cc es la cuenta de las columnas
         //ccs es la cuenta de las casillas seleccionadas (casillas que no son minas y están descubiertas)
@@ -46,6 +46,7 @@ public class Buscaminas {
         //IMPRESIÓN Y ACCIÓN
         //Este es el bucle que se ejecuta durante el juego
         //Controla la impresión del tablero y la acción (Seleccionar o poner bandera)
-        BuscaminasMétodos.Juego(c,cf,cc,nfc,cm,ccs,cb,cmv);
+        //El programa se rompe para dimensiones mayores de 999
+        BuscaminasMétodos.Juego(c,cf,cc,nfc,cm,ccs,cb,cmv,cfaux);
     }
 }
